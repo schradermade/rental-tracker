@@ -41,4 +41,10 @@ class App extends Component {
     this.setState({ rentals : updatedRentals });
   }
 
+  async componentDidMount() {
+    const response = await fetch();
+    const body = await response.json();
+    this.setState({ rentals : body, isLoading : false })
+  }
+
 }
