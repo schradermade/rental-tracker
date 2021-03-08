@@ -13,8 +13,11 @@ class App extends Component {
         'Garbage' : false
       }
     ]
-    
   }
 
+  remove(id) {
+    let updatedRentals = [...this.state.rentals].filter (i => i.id !== id)
+    this.setState({ rentals : updatedRentals });
+  }
 
 }
