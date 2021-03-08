@@ -20,4 +20,10 @@ class App extends Component {
     this.setState({ rentals : updatedRentals });
   }
 
+  redirect(id) {
+    let rental = [...this.state.rentals].filter (i => i.id ===id);
+    let url = rental[0].RentalTable;
+    window.open(url);
+  }
+
 }
